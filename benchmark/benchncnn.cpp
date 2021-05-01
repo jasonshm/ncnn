@@ -293,7 +293,7 @@ int main(int argc, char** argv)
 
     benchmark("resnet50_int8", ncnn::Mat(224, 224, 3), opt);
 
-    benchmark("squeezenet_ssd", ncnn::Mat(300, 300, 3), opt);
+    // benchmark("squeezenet_ssd", ncnn::Mat(300, 300, 3), opt); // coredump
 
     benchmark("squeezenet_ssd_int8", ncnn::Mat(300, 300, 3), opt);
 
@@ -305,7 +305,7 @@ int main(int argc, char** argv)
 
     benchmark("mobilenetv2_yolov3", ncnn::Mat(352, 352, 3), opt);
 
-    benchmark("yolov4-tiny", ncnn::Mat(416, 416, 3), opt);
+    // benchmark("yolov4-tiny", ncnn::Mat(416, 416, 3), opt);  // coredump
 
 #if NCNN_VULKAN
     delete g_blob_vkallocator;
